@@ -2,7 +2,11 @@
 <aiml>
   <category>
     <pattern>*</pattern>
-    <template>I have no answer for that.</template>
+    <template>
+        <random>
+            <li>I'm not sure how to respond to that.</li>
+            <li>I don't know what you mean.</li>
+        </random>
+    </template>
   </category>
-
 </aiml>
