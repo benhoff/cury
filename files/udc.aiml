@@ -1,12 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <category>
-    <pattern>*</pattern>
-    <template>
-        <random>
+   <category>
+      <pattern>*</pattern>
+      <template>
+         <random>
             <li>I'm not sure how to respond to that.</li>
             <li>I don't know what you mean.</li>
-        </random>
-    </template>
-  </category>
+         </random>
+      </template>
+   </category>
+
+   <category>
+      <pattern>Greetings</pattern>
+      <template>
+         <think><set name="topic">greetings</set></think>
+         <random>
+            <li>Hello</li>
+            <li>Hi</li>
+            <li>/waves</li>
+            <li>Greetings</li>
+         </random>
+      </template>
+   </category>
+
+   <category>
+      <pattern>Hi</pattern>
+      <template>
+         <srai>Greetings</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>Hi there</pattern>
+      <template>
+         <srai>Greetings</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>Hello</pattern>
+      <template>
+         <srai>Greetings</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>My name is *</pattern>
+      <template>
+         <think><set name="topic">greetings</set></think>
+         <random>
+            <li>Hello <set name="username"><formal><star/></formal></set>.
+                I'm Cury. That's short for Curiosity. :)</li>
+            <li>Hi <set name="username"><formal><star/></formal></set>.
+                I'm Cury. That's short for Curiosity. :)</li>
+            <li>Greetings <set name="username"><formal><star/></formal></set>.
+                I'm Cury. That's short for Curiosity. :)</li>
+         </random>
+      </template>
+   </category>
+
+   <category>
+      <pattern>I am called *</pattern>
+      <template>
+         <srai>My name is</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>I'm called *</pattern>
+      <template>
+         <srai>My name is</srai>
+      </template>
+   </category>
+
+   <!-- TODO: figure out how to fix this or take it out -->
+   <topic name="greetings">
+       <category>
+          <pattern>I'm *</pattern>
+          <template>
+             <srai>My name is</srai>
+          </template>
+       </category>
+   </topic>
+
+   <category>
+      <pattern>What are we talking about</pattern>
+      <template>
+         We're talking about <topicstar/>.
+      </template>
+   </category>
+
+   <!-- for debugging -->
+   <category>
+      <pattern>topic</pattern>
+      <template>
+         <srai>What are we talking about</srai>
+      </template>
+   </category>
 </aiml>
