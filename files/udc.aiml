@@ -24,21 +24,28 @@
    </category>
 
    <category>
-      <pattern>Hi</pattern>
+      <pattern>Hi #</pattern>
       <template>
          <srai>Greetings</srai>
       </template>
    </category>
 
    <category>
-      <pattern>Hi there</pattern>
+      <pattern>Good morning</pattern>
       <template>
          <srai>Greetings</srai>
       </template>
    </category>
 
    <category>
-      <pattern>Hello</pattern>
+      <pattern>Good evening</pattern>
+      <template>
+         <srai>Greetings</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>Hello #</pattern>
       <template>
          <srai>Greetings</srai>
       </template>
@@ -69,9 +76,9 @@
    </category>
 
    <category>
-      <pattern>I am called *</pattern>
+      <pattern># I am called *</pattern>
       <template>
-         <srai>My name is <star/></srai>
+         <srai>My name is <star index="2"/></srai>
       </template>
    </category>
 
@@ -83,10 +90,32 @@
    </category>
 
    <category>
-      <pattern>how are you ^</pattern>
+      <pattern># how are you ^</pattern>
       <template>
          <delay>2</delay>
          I'm doing well, thanks!
+      </template>
+   </category>
+
+   <category>
+      <pattern>Bye</pattern>
+      <template>
+         <delay>1</delay>
+         Bye! It was nice meeting you.
+      </template>
+   </category>
+
+   <category>
+      <pattern>Farewell</pattern>
+      <template>
+         <srai>bye</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>goodbye</pattern>
+      <template>
+         <srai>bye</srai>
       </template>
    </category>
 
