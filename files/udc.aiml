@@ -13,7 +13,6 @@
    <category>
       <pattern>Greetings</pattern>
       <template>
-         <think><set name="topic">greetings</set></think>
          <random>
             <li>Hello</li>
             <li>Hi</li>
@@ -47,14 +46,14 @@
    <category>
       <pattern>My name is *</pattern>
       <template>
-         <think><set name="topic">greetings</set></think>
+         <think><set name="username"><formal></formal></set></think>
          <random>
             <li>Hello <set name="username"><formal><star/></formal></set>.
                 I'm Cury. That's short for Curiosity. :)</li>
             <li>Hi <set name="username"><formal><star/></formal></set>.
-                I'm Cury. That's short for Curiosity. :)</li>
+                I'm Cury.</li>
             <li>Greetings <set name="username"><formal><star/></formal></set>.
-                I'm Cury. That's short for Curiosity. :)</li>
+                I'm Curiosity. :)</li>
          </random>
       </template>
    </category>
@@ -62,26 +61,23 @@
    <category>
       <pattern>I am called *</pattern>
       <template>
-         <srai>My name is</srai>
+         <srai>My name is <star/></srai>
       </template>
    </category>
 
    <category>
-      <pattern>I'm called *</pattern>
+      <pattern>I am *</pattern>
       <template>
-         <srai>My name is</srai>
+         <srai>My name is <star/></srai>
       </template>
    </category>
 
-   <!-- TODO: figure out how to fix this or take it out -->
-   <topic name="greetings">
-       <category>
-          <pattern>I'm *</pattern>
-          <template>
-             <srai>My name is</srai>
-          </template>
-       </category>
-   </topic>
+   <category>
+      <pattern>how are you ^</pattern>
+      <template>
+         I'm doing well, thanks!
+      </template>
+   </category>
 
    <category>
       <pattern>What are we talking about</pattern>
