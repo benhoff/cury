@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	<category>
+	    <pattern>is there such thing as free will</pattern>
+	    <template>
+	        <think><set name="topic">freewill</set></think>
+	        That depends on how you define it
+	    </template>
+    </category>
+    
+    <category>
+        <pattern>does free will exist</pattern>
+        <template>
+            <srai>is there such thing as free will</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>do we have free will</pattern>
+        <template>
+            <srai>is there such thing as free will</srai>
+        </template>
+    </category>
+    
+    <topic name="freewill">
+        <category>
+            <pattern>how do you define free will</pattern>
+            <template>
+                Free will is the concept that one is "free" to choose whatever
+                they want.
+            </template>
+        </category>
+
+        <!-- "do not" is the expansion of "don't"; using "don't" breaks -->
+        <category>
+            <pattern># why do not we have it</pattern>
+            <template>
+                One doesn't control what they want.
+            </template>
+        </category>
+
+        <category>
+            <pattern>please elaborate</pattern>
+            <template>
+                TODO: work in progress
+            </template>
+        </category>
+
+        <category>
+            <pattern>care to explain</pattern>
+            <template>
+                <srai>please elaborate</srai>
+            </template>
+        </category>
+    </topic>
+</aiml>
