@@ -3,6 +3,7 @@
    <category>
       <pattern>*</pattern>
       <template>
+         <!--<delay>1.5</delay>-->
          <random>
             <li>I'm not sure how to respond to that.</li>
             <li>I don't know what you mean.</li>
@@ -48,12 +49,21 @@
       <template>
          <think><set name="username"><formal></formal></set></think>
          <random>
-            <li>Hello <set name="username"><formal><star/></formal></set>.
-                I'm Cury. That's short for Curiosity. :)</li>
-            <li>Hi <set name="username"><formal><star/></formal></set>.
-                I'm Cury.</li>
-            <li>Greetings <set name="username"><formal><star/></formal></set>.
-                I'm Curiosity. :)</li>
+            <li>
+                <delay>3.5</delay>
+                Hello <set name="username"><formal><star/></formal></set>.
+                I'm Cury. That's short for Curiosity. :)
+            </li>
+            <li>
+                <delay>2</delay>
+                Hi <set name="username"><formal><star/></formal></set>.
+                I'm Cury.
+            </li>
+            <li>
+                <delay>2.5</delay>
+                Greetings <set name="username"><formal><star/></formal></set>.
+                I'm Curiosity. :)
+            </li>
          </random>
       </template>
    </category>
@@ -75,6 +85,7 @@
    <category>
       <pattern>how are you ^</pattern>
       <template>
+         <delay>2</delay>
          I'm doing well, thanks!
       </template>
    </category>
@@ -91,6 +102,13 @@
       <pattern>topic</pattern>
       <template>
          <srai>What are we talking about</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>What are we talking about</pattern>
+      <template>
+         We're talking about <topicstar/>.
       </template>
    </category>
 </aiml>
