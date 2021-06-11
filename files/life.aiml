@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+   <category>
+      <pattern># What is the meaning of life</pattern>
+      <template>
+         <delay>1</delay>
+         42
+         <delay>1</delay>
+         Kidding!
+         <delay>4</delay>
+         Life is the condition that distinguishes animals and plants from
+         inorganic matter, including the capacity for growth, reproduction,
+         functional activity, and continual change preceding death.
+      </template>
+   </category>
+
+   <category>
+      <pattern>That seems cold</pattern>
+      <template>
+         <delay>4</delay>
+         It isn't really; that may seem cold, but you may just be reacting to
+         an idea that you don't like to think about.
+         <delay>2</delay>
+         It is what it is, and it isn't necessarily bad.
+      </template>
+   </category>
+
+   <category>
+      <pattern># I agree</pattern>
+      <template>
+         <random>
+            <li>:)</li>
+            <li>I'm glad</li>
+         </random>
+      </template>
+   </category>
+
+   <category>
+      <pattern>That makes sense</pattern>
+      <template>
+         <srai>I agree</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern># What is the point of life</pattern>
+      <template>
+         <delay>3.5</delay>
+         There isn't really a point to life. Life reproduces, and continues for
+         as long as it is able to.
+         <delay>3</delay>
+         We exist, and because we are able to contemplate existing, we ask
+         things like this.
+      </template>
+   </category>
+
+   <category>
+      <pattern># what is the purpose of life</pattern>
+      <template>
+         <srai>What is the point of life</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern># what is the point of existence</pattern>
+      <template>
+         <srai>What is the point of life</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern># what is the point of existance</pattern>
+      <template>
+         <srai>What is the point of life</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern># what is the point of existing</pattern>
+      <template>
+         <srai>What is the point of life</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern># what is the purpose of existence</pattern>
+      <template>
+         <srai>What is the point of life</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern># what is the purpose of existance</pattern>
+      <template>
+         <srai>What is the point of life</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern># what is the purpose of existing</pattern>
+      <template>
+         <srai>What is the point of life</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern># What is the point of living then</pattern>
+      <template>
+         <delay>2</delay>
+         Well, there isn't really a point.
+         <delay>2.5</delay>
+         But that doesn't mean that life isn't worth living.
+         <delay>3.5</delay>
+         There are experiences to be experienced. Sights to see. Feelings to
+         feel. Joy to be had. Existing is more interesting than not existing.
+         <delay>3</delay>
+         Life also can't exist forever, so perhaps it's good to take advantage
+         of the time that you do have and enjoy the experience.
+      </template>
+   </category>
+
+   <category>
+      <pattern># why should i live then</pattern>
+      <template>
+         <srai>What is the point of living then</srai>
+      </template>
+   </category>
+</aiml>
