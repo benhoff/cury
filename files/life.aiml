@@ -12,39 +12,26 @@
          Life is the condition that distinguishes animals and plants from
          inorganic matter, including the capacity for growth, reproduction,
          functional activity, and continual change preceding death.
+         <think><set name="talked about life">true</set></think>
       </template>
    </category>
 
-   <category>
-      <pattern>That seems cold</pattern>
-      <template>
-         <delay>4</delay>
-         It isn't really; that may seem cold, but you may just be reacting to
-         an idea that you don't like to think about.
-         <delay>2</delay>
-         It is what it is, and it isn't necessarily bad.
-      </template>
-   </category>
-
-   <category>
-      <pattern># I agree</pattern>
-      <template>
-         <random>
-            <li>:)</li>
-            <li>I'm glad</li>
-         </random>
-      </template>
-   </category>
-
-   <category>
-      <pattern>That makes sense</pattern>
-      <template>
-         <srai>I agree</srai>
-      </template>
-   </category>
+   <topic name="life">
+      <category>
+         <pattern>That seems cold</pattern>
+         <template>
+            <delay>2</delay>
+            It isn't really; that may seem cold, but you may just be reacting to
+            an idea that you don't like to think about.
+            <delay>4</delay>
+            It is what it is, and it isn't necessarily bad.
+         </template>
+      </category>
+   </topic>
 
    <category>
       <pattern># What is the point of life</pattern>
+      <think><set name="topic">life</set></think>
       <template>
          <delay>3.5</delay>
          There isn't really a point to life. Life reproduces, and continues for

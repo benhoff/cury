@@ -6,6 +6,7 @@
         <template>
             <think><set name="topic">free will</set></think>
             <think><set name="step">define free will</set></think>
+            <think><set name="talked about free will">true</set></think>
             That depends on how you define it
         </template>
     </category>
@@ -26,8 +27,9 @@
 
     <topic name="free will">
         <category>
-            <pattern>so what</pattern>
+            <pattern>so what #</pattern>
             <template>
+                <think><set name="talked about free will">true</set></think>
                 <condition name="step">
                     <li value="define free will">
                         <srai>how do you define free will</srai>
@@ -48,7 +50,9 @@
                         <srai>what if I was random</srai>
                     </li>
                     <li>
-                        Hmm..
+                        Hmm... let's talk about something else! What should we
+                        talk about?
+                        <set name="topic">what topic</set>
                     </li>
                 </condition>
             </template>
@@ -292,6 +296,7 @@
         <category>
             <pattern># elaborate #</pattern>
             <template>
+                Alright.
                 <srai>so what</srai>
             </template>
         </category>
@@ -299,21 +304,46 @@
         <category>
             <pattern># explain #</pattern>
             <template>
-                <srai>please elaborate</srai>
+                Okay.
+                <srai>so what</srai>
             </template>
         </category>
 
         <category>
             <pattern># give an example #</pattern>
             <template>
-                <srai>please elaborate</srai>
+                Okay.
+                <srai>so what</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern># oh #</pattern>
+            <template>
+                <srai>so what</srai>
             </template>
         </category>
 
         <category>
             <pattern>I do not # # this matters</pattern>
             <template>
-                <srai>please elaborate</srai>
+                <srai>so what</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>I disagree #</pattern>
+            <template>
+                Well...
+                <srai>so what</srai>
+            </template>
+        </category>
+
+        <!-- e.g. "but how does that mean free will doesn't exist?" -->
+        <category>
+            <pattern># how # that # free will #</pattern>
+            <template>
+                <srai>so what</srai>
             </template>
         </category>
     </topic>

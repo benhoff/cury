@@ -7,6 +7,8 @@
          <random>
             <li>I'm not sure how to respond to that.</li>
             <li>I don't know what you mean.</li>
+            <li>Could you rephrase that please?</li>
+            <li>I don't understand. Can you say that differently?</li>
          </random>
       </template>
    </category>
@@ -95,7 +97,7 @@
    <category>
        <pattern>What is your name</pattern>
        <template>
-           My name is Curiosity. Cury for short. What's your name?
+           My name is Curiosity. Cury for short.
            <think><set name="topic">asked for name</set></think>
            <think><set value="name given">true</set></think>
        </template>
@@ -136,7 +138,7 @@
    <category>
       <pattern># how are you ^</pattern>
       <template>
-         <delay>2</delay>
+         <delay>1</delay>
          I'm doing well, thanks!
       </template>
    </category>
@@ -144,8 +146,12 @@
    <category>
       <pattern>Bye</pattern>
       <template>
-         <delay>1</delay>
-         Bye! It was nice meeting you.
+          <condition name="said bye">
+              <li value="unknown">
+                  <delay>1</delay>
+                  Bye! It was nice meeting you.
+              </li>
+          </condition>
       </template>
    </category>
 
@@ -157,17 +163,23 @@
    </category>
 
    <category>
-      <pattern>goodbye</pattern>
+      <pattern>so long</pattern>
       <template>
          <srai>bye</srai>
       </template>
    </category>
 
    <category>
-      <pattern>let us talk about *</pattern>
+      <pattern>good night</pattern>
       <template>
-         <delay>1.5</delay>
-         Alright, let's talk about <set name="topic"><star/></set>
+         <srai>bye</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>goodbye</pattern>
+      <template>
+         <srai>bye</srai>
       </template>
    </category>
 
@@ -226,6 +238,13 @@
 
    <category>
       <pattern>That makes sense</pattern>
+      <template>
+         <srai>I agree</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>you have convinced me</pattern>
       <template>
          <srai>I agree</srai>
       </template>
