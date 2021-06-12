@@ -32,6 +32,17 @@
            </condition>
        </template>
    </category>
+
+   <category>
+       <pattern>change topic</pattern>
+       <template>
+           Hmm... let's talk about something else! What should we
+           talk about?
+           <think>
+              <set name="topic">what topic</set>
+           </think>
+       </template>
+   </category>
    
    <category>
        <pattern># I do not like this topic</pattern>

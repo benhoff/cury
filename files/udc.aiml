@@ -249,4 +249,9 @@
          <srai>I agree</srai>
       </template>
    </category>
+
+   <category>
+      <pattern>nevermind</pattern>
+      <template>ok</template>
+   </category>
 </aiml>

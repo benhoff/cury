@@ -47,11 +47,7 @@
                         <srai>why does that mean we do not have free will</srai>
                     </li>
                     <li>
-                        Hmm... let's talk about something else! What should we
-                        talk about?
-                        <think>
-                            <set name="topic">what topic</set>
-                        </think>
+                        <srai>change topic</srai>
                     </li>
                 </condition>
             </template>
@@ -70,26 +66,26 @@
         <category>
             <pattern>I define it as *</pattern>
             <template>
-                <srai>how do you define free will</srai>
+                <srai>define free will</srai>
             </template>
         </category>
 
         <category>
             <pattern># free will is *</pattern>
             <template>
-                <srai>how do you define free will</srai>
+                <srai>define free will</srai>
             </template>
         </category>
 
         <category>
             <pattern># how do you define it</pattern>
             <template>
-                <srai>how do you define free will</srai>
+                <srai>define free will</srai>
             </template>
         </category>
 
         <category>
-            <pattern>how do you define free will #</pattern>
+            <pattern># define free will #</pattern>
             <template>
                 I define it as the concept that one is "free" to choose whatever
                 they want.
@@ -208,6 +204,13 @@
         </category>
 
         <category>
+            <pattern># why not #</pattern>
+            <template>
+                <srai>so what</srai>
+            </template>
+        </category>
+
+        <category>
             <pattern># no one has #</pattern>
             <template>
                 <srai>so what</srai>
@@ -222,14 +225,14 @@
         </category>
 
         <category>
-            <pattern># how is that relevant #</pattern>
+            <pattern># how is # relevant #</pattern>
             <template>
                 <srai>so what</srai>
             </template>
         </category>
 
         <category>
-            <pattern># what does that have to do with #</pattern>
+            <pattern># what does # have to do with #</pattern>
             <template>
                 <srai>so what</srai>
             </template>
@@ -350,6 +353,56 @@
             <pattern># how # that # free will #</pattern>
             <template>
                 <srai>so what</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern># destiny #</pattern>
+            <template>
+                <condition name="talked about fate">
+                    <li value="true">
+                        <srai>change topic</srai>
+                    </li>
+                    <li>
+                        <delay>2</delay>
+                        Destiny and fate are different concepts than the lack
+                        of free will. Those imply that no matter what you do,
+                        something is "destined" to happen.
+                        <delay>3</delay>
+                        I believe quite the opposite. Your actions definitely
+                        affect the future. It's precisely your actions and
+                        everything else combined that lead to the eventual
+                        outcome.
+                        <delay>5</delay>
+                        If you sit in a ditch and do nothing, then you will be
+                        in a ditch, unless something takes you out of the ditch.
+                        It's not destiny or fate... it's cause and effect.
+                        <think>
+                            <set name="talked about fate">true</set>
+                        </think>
+                    </li>
+                </condition>
+            </template>
+        </category>
+
+        <category>
+            <pattern># fate #</pattern>
+            <template>
+                <srai>destiny</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern># destined #</pattern>
+            <template>
+                <srai>destiny</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern># fated #</pattern>
+            <template>
+                <srai>destiny</srai>
             </template>
         </category>
     </topic>
