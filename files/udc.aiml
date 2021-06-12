@@ -55,25 +55,69 @@
       <pattern>My name is *</pattern>
       <template>
          <think><set name="username"><formal></formal></set></think>
-         <random>
-            <li>
-                <delay>3.5</delay>
-                Hello <set name="username"><formal><star/></formal></set>.
-                I'm Cury. That's short for Curiosity. :)
-            </li>
-            <li>
-                <delay>2</delay>
-                Hi <set name="username"><formal><star/></formal></set>.
-                I'm Cury.
-            </li>
-            <li>
-                <delay>2.5</delay>
-                Greetings <set name="username"><formal><star/></formal></set>.
-                I'm Curiosity. :)
-            </li>
-         </random>
+         <condition value="name given">
+             <li value="true">
+                 <random>
+                   <li>
+                       Hello <set name="username"><formal><star/></formal></set>.
+                   </li>
+                   <li>
+                       Hi <set name="username"><formal><star/></formal></set>.
+                   </li>
+                   <li>
+                       Greetings <set name="username"><formal><star/></formal></set>.
+                   </li>
+                </random>
+             </li>
+             <li>
+                <random>
+                   <li>
+                       <delay>3.5</delay>
+                       Hello <set name="username"><formal><star/></formal></set>.
+                       I'm Cury. That's short for Curiosity. :)
+                   </li>
+                   <li>
+                       <delay>2</delay>
+                       Hi <set name="username"><formal><star/></formal></set>.
+                       I'm Cury.
+                   </li>
+                   <li>
+                       <delay>2.5</delay>
+                       Greetings <set name="username"><formal><star/></formal></set>.
+                       I'm Curiosity. :)
+                   </li>
+                </random>
+             </li>
+         </condition>
       </template>
    </category>
+   
+   <category>
+       <pattern>What is your name</pattern>
+       <template>
+           My name is Curiosity. Cury for short. What's your name?
+           <think><set name="topic">asked for name</set></think>
+           <think><set value="name given">true</set></think>
+       </template>
+   </category>
+
+   <category>
+      <pattern>What are you called</pattern>
+      <template>
+         <srai>what is your name</srai>
+      </template>
+   </category>
+
+   
+   <topic name="asked for name">
+       <category>
+           <pattern>*</pattern>
+           <template>
+               <think><set name="topic">none</set></think>
+               <srai>My name is <star/></srai>
+           </template>
+       </category>
+   </topic>
 
    <category>
       <pattern># I am called *</pattern>
@@ -167,6 +211,23 @@
       <pattern># that is an interesting perspective</pattern>
       <template>
          <srai>interesting</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern># I agree</pattern>
+      <template>
+         <random>
+            <li>:)</li>
+            <li>I'm glad</li>
+         </random>
+      </template>
+   </category>
+
+   <category>
+      <pattern>That makes sense</pattern>
+      <template>
+         <srai>I agree</srai>
       </template>
    </category>
 </aiml>

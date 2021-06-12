@@ -3,6 +3,7 @@
    <category>
       <pattern># What is the meaning of life</pattern>
       <template>
+          <think><set name="topic">life</set></think>
          <delay>1</delay>
          42
          <delay>1</delay>
