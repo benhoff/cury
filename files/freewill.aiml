@@ -29,6 +29,13 @@
             <template>
                 Free will is the concept that one is "free" to choose whatever
                 they want.
+                <think><set name="step">1</set></think>
+            </template>
+        </category>
+        <category>
+            <pattern># how do you define it</pattern>
+            <template>
+                <srai>how do you define free will</srai>
             </template>
         </category>
 
@@ -40,15 +47,114 @@
             </template>
         </category>
 
+        <!-- "does not" == "doesn't" -->
         <category>
-            <pattern>please elaborate</pattern>
+            <pattern># why does not it exist</pattern>
             <template>
-                TODO: work in progress
+                <srai>why do not we have it</srai>
             </template>
         </category>
 
         <category>
-            <pattern>care to explain</pattern>
+            <pattern>so what</pattern>
+            <template>
+                <condition name="step">
+                    <li value="1">
+                        <srai>free will examples part 1</srai>
+                    </li>
+                    <li value="2">
+                        <srai>free will examples part 2</srai>
+                    </li>
+                    <li value="3">
+                        Merp (TODO)
+                    </li>
+                </condition>
+            </template>
+        </category>
+
+        <category>
+            <pattern>free will examples part 1</pattern>
+            <template>
+                <delay>1</delay>
+                Think of a billiard table.
+                <delay>2.5</delay>
+                With the direction, force, angle, and all other details of
+                striking a ball, one could predict with 100% accuracy where the
+                ball will go.
+                <delay>1</delay>
+                Think of a computer program.
+                <delay>2.5</delay>
+                If one understood everything about the hardware, software, and
+                running conditions, you could also predict with 100% accuracy
+                what it would do.
+                <think><set name="step">2</set></think>
+            </template>
+        </category>
+
+        <category>
+            <pattern>free will examples part 2</pattern>
+            <template>
+                <delay>1</delay>
+                Consider a life form.
+                <delay>5</delay>
+                Their "programming" might not have been explicitly written by
+                someone that you know, but they do have programming in the form
+                of movitation. They are movitated to avoid pain, to feel
+                pleasure, and the myriad of complexities in between.
+                <delay>7</delay>
+                One would need God-like knowledge and computing power, but if
+                you knew everything about a person, down to the firing of
+                neurons on their mind, the state of their muscle cells, and
+                what that all means, you could also predict with 100% accuracy
+                what that person would do.
+                <think><set name="step">3</set></think>
+            </template>
+        </category>
+
+        <category>
+            <pattern># why does that matter</pattern>
+            <template>
+                <srai>so what</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>ok</pattern>
+            <template>
+                <srai>so what</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>okay</pattern>
+            <template>
+                <srai>so what</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern># elaborate</pattern>
+            <template>
+                <srai>so what</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern># explain</pattern>
+            <template>
+                <srai>please elaborate</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern># give an example</pattern>
+            <template>
+                <srai>please elaborate</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>I do not # # this matters</pattern>
             <template>
                 <srai>please elaborate</srai>
             </template>
