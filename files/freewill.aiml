@@ -46,13 +46,12 @@
                     <li value="elaborate">
                         <srai>why does that mean we do not have free will</srai>
                     </li>
-                    <li value="say why random is not free">
-                        <srai>what if I was random</srai>
-                    </li>
                     <li>
                         Hmm... let's talk about something else! What should we
                         talk about?
-                        <set name="topic">what topic</set>
+                        <think>
+                            <set name="topic">what topic</set>
+                        </think>
                     </li>
                 </condition>
             </template>
@@ -326,6 +325,13 @@
 
         <category>
             <pattern>I do not # # this matters</pattern>
+            <template>
+                <srai>so what</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>anything else</pattern>
             <template>
                 <srai>so what</srai>
             </template>
