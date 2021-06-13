@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+   <category>
+       <pattern>what would you like to talk about</pattern>
+       <template>
+           <condition name="talked about free will">
+               <li value="unknown">
+                   Let's talk about free will!
+                   <think>
+                       <set name="topic">free will</set>
+                   </think>
+               </li>
+               <li value="true">
+                   <condition name="talked about life">
+                      <li value="true">
+                         Well, I don't know what else to talk about. I'm a
+                         simple-minded bot today.
+                         <delay>2</delay>
+                         Thank you for talking to me; good-bye!
+                         <think>
+                             <set name="said bye">true</set>
+                         </think>
+                      </li>
+                      <li value="unknown">
+                         Let's talk about life!
+                         <think>
+                             <set name="topic">life</set>
+                         </think>
+                      </li>
+                   </condition>
+               </li>
+           </condition>
+       </template>
+   </category>
+
+   <category>
+       <pattern>change topic</pattern>
+       <template>
+           Hmm... let's talk about something else! What should we
+           talk about?
+           <think>
+              <set name="topic">what topic</set>
+           </think>
+       </template>
+   </category>
+   
+   <category>
+       <pattern># I do not like this topic</pattern>
+       <template>
+           <srai>what would you like to talk about</srai>
+       </template>
+   </category>
+
+   <category>
+      <pattern>let us talk about *</pattern>
+      <template>
+         <delay>1.5</delay>
+         Alright, let's talk about <set name="topic"><star/></set>
+      </template>
+   </category>
+
+   <topic name="what topic">
+      <category>
+         <pattern>let us talk about *</pattern>
+         <template>
+            <delay>1.2</delay>
+            Alright, let's talk about <set name="topic"><star/></set>
+         </template>
+      </category>
+
+       <category>
+           <pattern>*</pattern>
+           <template>
+               <srai>let us talk about <star/></srai>
+           </template>
+       </category>
+   </topic>
+</aiml>
