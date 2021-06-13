@@ -51,6 +51,55 @@
       </template>
    </category>
 
+   <category>
+      <pattern>shall we talk about *</pattern>
+      <template>
+          <srai>let us talk about <star/></srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>tell me about *</pattern>
+      <template>
+          <srai>let us talk about <star/></srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>shall we chat about *</pattern>
+      <template>
+          <srai>let us talk about <star/></srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>shall we discuss *</pattern>
+      <template>
+          <srai>let us talk about <star/></srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>would you like to talk about *</pattern>
+      <template>
+          <srai>let us talk about <star/></srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>would you like to chat about *</pattern>
+      <template>
+          <srai>let us talk about <star/></srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>would you like to discuss *</pattern>
+      <template>
+          <srai>let us talk about <star/></srai>
+      </template>
+   </category>
+
    <topic name="what topic">
       <category>
          <pattern>let us talk about *</pattern>
