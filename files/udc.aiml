@@ -19,7 +19,6 @@
          <random>
             <li>Hello</li>
             <li>Hi</li>
-            <li>/waves</li>
             <li>Greetings</li>
          </random>
       </template>
