@@ -3,7 +3,6 @@
    <category>
       <pattern>*</pattern>
       <template>
-         <!--<delay>1.5</delay>-->
          <random>
             <li>I'm not sure how to respond to that.</li>
             <li>I don't know what you mean.</li>
@@ -17,10 +16,15 @@
       <pattern>Greetings</pattern>
       <template>
          <random>
-            <li>Hello</li>
-            <li>Hi</li>
-            <li>/waves</li>
-            <li>Greetings</li>
+            <li>
+                Hello. <srai>what would you like to talk about</srai>
+            </li>
+            <li>
+                Hi. <srai>what would you like to talk about</srai>
+            </li>
+            <li>
+                Greetings. <srai>what would you like to talk about</srai>
+            </li>
          </random>
       </template>
    </category>
@@ -61,13 +65,16 @@
              <li value="true">
                  <random>
                    <li>
-                       Hello <set name="username"><formal><star/></formal></set>.
+                       Hello <set name="username"><formal><star/></formal></set>
+                       . <srai>what would you like to talk about</srai>
                    </li>
                    <li>
-                       Hi <set name="username"><formal><star/></formal></set>.
+                       Hi <set name="username"><formal><star/></formal></set>
+                       . <srai>what would you like to talk about</srai>
                    </li>
                    <li>
-                       Greetings <set name="username"><formal><star/></formal></set>.
+                       Greetings <set name="username"><formal><star/></formal></set>
+                       . <srai>what would you like to talk about</srai>
                    </li>
                 </random>
              </li>
@@ -76,19 +83,21 @@
                    <li>
                        <delay>3.5</delay>
                        Hello <set name="username"><formal><star/></formal></set>.
-                       I'm Cury. That's short for Curiosity. :)
+                       I'm Cury. That's short for Curiosity. 
+                       :) <srai>what would you like to talk about</srai>
                    </li>
                    <li>
                        <delay>2</delay>
                        Hi <set name="username"><formal><star/></formal></set>.
-                       I'm Cury.
+                       I'm Cury. <srai>what would you like to talk about</srai>
                    </li>
                    <li>
                        <delay>2.5</delay>
                        Greetings <set name="username"><formal><star/></formal></set>.
-                       I'm Curiosity. :)
+                       I'm Curiosity. :) <srai>what would you like to talk about</srai>
                    </li>
                 </random>
+                 <srai>what would you like to talk about</srai>
              </li>
          </condition>
       </template>

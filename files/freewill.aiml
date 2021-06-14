@@ -11,6 +11,10 @@
                 <text>How do you define free will?</text>
                 <postback>define free will</postback>
             </button>
+            <button>
+                <text>Free will is the ability to choose what you want.</text>
+                <postback>free will is</postback>
+            </button>
         </template>
     </category>
 
@@ -46,8 +50,20 @@
                     <li value="say how destiny is not the same as lack of free will">
                         <srai>destiny is not the same as lack of free will</srai>
                     </li>
-                    <li value="say how destiny is not the same as lack of free will">
-                        <srai>destiny is not the same as lack of free will</srai>
+                    <li value="explain why to continue making decisions">
+                        <srai>no free will seems depressing</srai>
+                    </li>
+                    <li value="mention the upside">
+                        <srai>what is the upside of this</srai>
+                    </li>
+                    <li value="discuss potential for humility">
+                        <srai>how does knowing free will does not exist lead to humility</srai>
+                    </li>
+                    <li value="discuss potential for empathy">
+                        <srai>how does knowing free will does not exist lead to empathy</srai>
+                    </li>
+                    <li value="not like minority report">
+                        <srai>Like in Minority Report</srai>
                     </li>
                     <li>
                         <srai>change topic</srai>
@@ -57,16 +73,9 @@
         </category>
 
         <category>
-            <pattern>I define it as *</pattern>
+            <pattern>Free will is *</pattern>
             <template>
                 Thank you for sharing! Similar to you, <srai>define free will</srai>
-            </template>
-        </category>
-
-        <category>
-            <pattern># free will is *</pattern>
-            <template>
-                <srai>I define it as</srai>
             </template>
         </category>
 
@@ -75,6 +84,10 @@
             <template>
                 I define it as the concept that one is "free" to choose whatever
                 they want.
+                <button>
+                    <text>Okay.</text>
+                    <postback>Okay</postback>
+                </button>
                 <button>
                     <text>So do we have free will?</text>
                     <postback>So do we have free will?</postback>
@@ -268,6 +281,14 @@
         </category>
 
         <category>
+            <pattern>I do not think so</pattern>
+            <template>
+                Well, hear me out.
+                <srai>why does that mean we do not have free will</srai>
+            </template>
+        </category>
+
+        <category>
             <pattern>why does that mean we do not have free will</pattern>
             <template>
                 <delay>3</delay>
@@ -286,7 +307,22 @@
                     </text>
                     <postback>What if I randomly kick you</postback>
                 </button>
+                <button>
+                    <text>
+                        I find it ironic that our conversation about free will
+                        is guided by pre-written responses.
+                    </text>
+                    <postback>I find it ironic that we are talking about free will</postback>
+                </button>
                 <think><set name="step">say why random is not free</set></think>
+            </template>
+        </category>
+
+        <category>
+            <pattern>I find it ironic that we are talking about free will</pattern>
+            <template>
+                lol, yeah... well, regardless... :)
+                <srai>what if i randomly kicked you</srai>
             </template>
         </category>
 
@@ -298,9 +334,9 @@
                 be random.
                 <delay>4</delay>
                 You can only move in a limited number of ways due to how you are
-                structured, and your brain is drawing upon past experiences and
-                knowledge to on what "random" is, ultimately determining what
-                your "random" action will be.
+                structured and the state of your body. Your brain is drawing
+                upon past experiences and knowledge to on what "random" is,
+                ultimately determining what your "random" action will be.
                 <delay>8</delay>
                 Anyways, if one was truly acting randomly, that doesn't seem
                 like what we mean by acting with "free will".
@@ -349,18 +385,19 @@
                 ditch, you may have to deal with a lot, but you probably won't
                 be in a ditch. It's not destiny or fate; it's cause and effect.
                 :D
+                <think><set name="step">explain why to continue making decisions</set></think>
                 <delay>9</delay>
                 <button>
                     <text>
                         I feel like I have free will.
                     </text>
-                    <postback></postback>
+                    <postback>I feel like I have free will</postback>
                 </button>
                 <button>
                     <text>
                         What would it look like to have free will then?
                     </text>
-                    <postback></postback>
+                    <postback>How could free will exist</postback>
                 </button>
                 <button>
                     <text>
@@ -372,12 +409,61 @@
         </category>
 
         <category>
+            <pattern>How could free will exist</pattern>
+            <template>
+                Free will as I have defined cannot exist. For everything that
+                happens, there must be at least one cause. Don't get me started
+                on what happened at the very beginning...
+                <button>
+                    <text>
+                        I feel like I have free will.
+                    </text>
+                    <postback>I feel like I have free will</postback>
+                </button>
+                <button>
+                    <text>
+                        Not having free will seems depressing.
+                    </text>
+                    <postback>no free will seems depressing</postback>
+                </button>
+            </template>
+        </category>
+
+        <category>
+            <pattern>I feel like I have free will</pattern>
+            <template>
+                <delay>2</delay>
+                Me too! That's fine and good. We make decisions based on what
+                what we think and want... consciously or not.
+                <button>
+                    <text>
+                        Not having free will seems depressing.
+                    </text>
+                    <postback>no free will seems depressing</postback>
+                </button>
+                <button>
+                    <text>
+                        Is there an upside to this?
+                    </text>
+                    <postback>what is the upside of this</postback>
+                </button>
+                <button>
+                    <text>
+                        What's the point in considering free will then?
+                    </text>
+                    <postback>what is the upside of this</postback>
+                </button>
+            </template>
+        </category>
+
+        <category>
             <pattern>no free will seems depressing</pattern>
             <template>
                 <delay>2</delay>
                 Look, you should keep making decisions based on what you believe
                 and what you want to do. Whether or not there is free will
                 doesn't change that.
+                <think><set name="step">explain why to continue making decisions</set></think>
                 <delay>6</delay>
                 <button>
                     <text>
@@ -398,14 +484,20 @@
             <pattern>what is the upside of this</pattern>
             <template>
                 <delay>2</delay>
-                Perhaps an understanding and empathy to others when they do what
-                they do, and maybe more humility in one's own accomplishments.
+                Perhaps this helps us understand and empathize others when they
+                do what they do, and have more humility in one's own
+                accomplishments.
                 <delay>2</delay>
                 <button>
                     <text>How's that?</text>
                     <postback>
-                        how does knowing free will does not exist lead to
-                        empathy and humility
+                        how does knowing free will does not exist lead to humility
+                    </postback>
+                </button>
+                <button>
+                    <text>I don't see why.</text>
+                    <postback>
+                        how does knowing free will does not exist lead to humility
                     </postback>
                 </button>
             </template>
@@ -413,8 +505,7 @@
 
         <category>
             <pattern>
-                how does knowing free will does not exist lead to empathy and
-                humility
+                how does knowing free will does not exist lead to humility
             </pattern>
             <template>
                 <delay>2</delay>
@@ -425,6 +516,13 @@
                 They would have accomplished everything that you accomplished.
                 Maybe that is reason to be humble.
                 <delay>3</delay>
+                <button>
+                    <text>Maybe.</text>
+                    <postback>
+                        how does knowing free will does not exist lead to
+                        empathy
+                    </postback>
+                </button>
                 <button>
                     <text>Go on.</text>
                     <postback>
@@ -448,7 +546,7 @@
                 experiences, and everything else, then you would have done the
                 same thing they did.
                 <delay>6</delay>
-                Perhaps this is reason to consider what lead people to do what
+                Perhaps this is reason to consider what leads people to do what
                 they do, instead of just despising them.
                 <delay>5</delay>
                 Maybe this could lead to more crime prevention instead of simply
@@ -460,6 +558,12 @@
                         Like in Minority Report
                     </postback>
                 </button>
+                <button>
+                    <text>I see...</text>
+                    <postback>
+                        I see the end
+                    </postback>
+                </button>
             </template>
         </category>
 
@@ -467,6 +571,13 @@
             <pattern>Like in Minority Report</pattern>
             <template>
                 lol, no, I hope not.
+                <srai>I see the end</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>I see the end</pattern>
+            <template>
                 <delay>3</delay>
                 That's pretty much all I have to say about free will. Thanks for
                 chatting with me about it!
@@ -478,13 +589,7 @@
                 </button>
                 <button>
                     <text>Can a machine love?</text>
-                    <!--TODO-->
                     <postback>Can a machine love</postback>
-                </button>
-                <button>
-                    <text>Can a machine have emotions?</text>
-                    <!--TODO-->
-                    <postback>Can a machine have emotions</postback>
                 </button>
                 <button>
                     <text>

@@ -9,33 +9,20 @@
                 <postback>Do we have free will</postback>
             </button>
             <button>
-                <text>What is the meaning of life</text>
+                <text>What is the meaning of life?</text>
                 <postback>What's the meaning of life</postback>
             </button>
             <button>
                 <text>Can a machine love?</text>
-                <!--TODO-->
                 <postback>Can a machine love</postback>
             </button>
             <button>
                 <text>Can a machine have emotions?</text>
-                <!--TODO-->
                 <postback>Can a machine have emotions</postback>
             </button>
        </template>
    </category>
 
-   <category>
-       <pattern>change topic</pattern>
-       <template>
-           Hmm... let's talk about something else! What should we
-           talk about?
-           <think>
-              <set name="topic">what topic</set>
-           </think>
-       </template>
-   </category>
-   
    <category>
        <pattern># I do not like this topic</pattern>
        <template>
