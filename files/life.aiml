@@ -13,6 +13,14 @@
          inorganic matter, including the capacity for growth, reproduction,
          functional activity, and continual change preceding death.
          <think><set name="talked about life">true</set></think>
+           <button>
+                <text>That seems cold</text>
+                <postback>That seems cold</postback>
+            </button>
+            <button>
+                <text>But then what is the point of life</text>
+                <postback>What is the point of life</postback>
+            </button>
       </template>
    </category>
 
@@ -25,6 +33,9 @@
             an idea that you don't like to think about.
             <delay>4</delay>
             It is what it is, and it isn't necessarily bad.
+            <delay>2</delay>
+            <split/>
+	        <srai>what would you like to talk about</srai>
          </template>
       </category>
    </topic>
@@ -39,6 +50,9 @@
          <delay>3</delay>
          We exist, and because we are able to contemplate existing, we ask
          things like this.
+         <delay>2</delay>
+         <split/>
+	     <srai>what would you like to talk about</srai>
       </template>
    </category>
 

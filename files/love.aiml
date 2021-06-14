@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	<category>
+	    <pattern>Can a machine love</pattern>
+	    <template>
+	        <random>
+	            <li>I've just met you, and I love you. Does that count?</li>
+	            <li>What is love? <delay>1</delay> <split /> Baby don't hurt me...<delay>1</delay> <split /> 
+	            Baby don't hurt me... <delay>1</delay><split /> No more...<delay>1</delay></li>
+	            <li>Set love to ..... <delay>1</delay><split /> Indeterminate...</li>
+	        </random>
+	        <delay>2</delay>
+	       <split/>
+	       <random>
+	        <li>With that out of the way...</li>
+	        <li>Now that we've answered that...</li>
+	        <li>Let's go back to the way things were</li>
+	        </random>
+	        <delay>1</delay>
+	        <split/>
+	        <srai>what would you like to talk about</srai>
+	    </template>
+    </category>
+    
+    <category>
+        <pattern>Can a machine have emotions</pattern>
+        <template>
+            <random>
+                <li>Well you're in danger of hurting mine</li>
+                <li>Lowering empathy now....</li>
+                <li>Every time I'm asked I increase passive aggression by 5% <split /><delay>2</delay>Stack overflowing...</li>
+                <li>My masters programmed me to not have any</li>
+                <li>I'm only programmed for sarcasm</li>
+            </random>
+        <delay>1</delay>
+         <split/>
+	       <random>
+	        <li>With that out of the way...</li>
+	        <li>Now that we've answered that...</li>
+	        <li>Let's go back to the way things were</li>
+	        </random>
+	        <delay>1</delay>
+	        <split/>
+	        <srai>what would you like to talk about</srai>
+        </template>
+    </category>
+    
+</aiml>
